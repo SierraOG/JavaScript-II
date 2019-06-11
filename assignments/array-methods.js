@@ -84,7 +84,23 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// The company Skinix pulls out of the race. You could use .filter() to make a new data set without any employees from Skinix.
+let runnersUpdated = runners.filter(runner => {
+    return runner.company_name !== 'Skinix';
+});
+//console.log(runnersUpdated);
 
 // Problem 2
+//The event director needs a list with only last names and shirt sizes to send to the company that will make custom t shirts for the race. This can be done using .map().
+let forShirtCompany = runners.map(runner =>{
+    return {'last_name': runner.last_name, 'shirt_size': runner.shirt_size};
+})
+//console.log(forShirtCompany);
 
 // Problem 3
+//A generous benefactor has decided to double everyone's donations. Use .forEach() to double everyone's donations in a new array.
+let newDonation = runners;
+newDonation.forEach(function(runner){
+    runner.donation = runner.donation*2;
+})
+//console.log(newDonation);
