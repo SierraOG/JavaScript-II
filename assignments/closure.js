@@ -34,7 +34,7 @@ const counterFactory = () => {
       return ++ count;
     },
     decrement: function(){
-      return count - 1;
+      return -- count;
     }
   }
   return countObj;

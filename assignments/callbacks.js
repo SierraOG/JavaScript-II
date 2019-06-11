@@ -90,3 +90,8 @@ array = [1,4,6,2,6];
 removeDuplicates(array, (newarr) => {
   console.log(newarr);
 });
+
+//IIFE
+(function(){
+  console.log('Hello I am an IIFE and I protect the global namespace by not creating a named function')
+})();
